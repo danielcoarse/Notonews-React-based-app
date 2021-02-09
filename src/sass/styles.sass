@@ -1,0 +1,110 @@
+@import "bootstrap/scss/bootstrap";
+@import 'variables';
+
+#preloder
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 99
+  width: 100vw
+  height: 100vh
+  background: rgba(0.677, 0.708, 0.799,0.5)
+  display: flex
+  justify-content: center
+  align-items: center  
+
+header
+  .navlist
+    list-style-type: none
+    margin: 0
+    padding: 0
+    .list-item
+      margin-right: 20px
+      cursor: pointer
+      &:last-child
+        margin-right: 0
+  .logo
+    margin-right: 10px
+    &-text
+      margin-left: 10px
+  .material-icons
+    font-size: 30px
+
+main
+  margin-top: 3rem
+  .card
+    display: inline-block
+    column-break-inside: avoid
+    overflow: hidden
+    .card-title
+      color: $black
+      text-decoration: none
+      h5
+        display: inline-block
+        &:hover
+          color: $gray
+    .card-img
+      img
+        transition: 0.4s
+        &:hover
+            transform: translateY(2%)
+
+.category-select
+  margin-top: 5rem
+  height: 40px
+  overflow: hidden
+  .category-wrapper
+    display: flex
+    align-items: center
+    overflow-x: auto
+    overflow-y: hidden
+    height: 55px
+  .category-header
+    position: relative
+    padding-right: 10px
+    &::after
+      content: ''
+      position: absolute
+      right: 0
+      width: 1px
+      height: 100%
+      background-color: #000
+  .category-list
+    list-style-type: none
+    display: flex
+    .category-item
+      margin-right: 30px
+      cursor: pointer
+      color: $secondary
+      &:last-child
+        margin-right: 0
+      &:hover
+        color: $dark
+    .category-item.active
+        font-weight: bold
+
+.search-modal
+  transition: 0.4s
+  transform: translateY(-100%)
+  position: fixed
+  top: 56px
+  left: 0
+  width: 100%
+  background-color: rgba(0,0,0,0.8)
+  color: $white
+  &-wrapper
+  .modal-header
+    span
+      font-size: 50px
+      color: $white
+      cursor: pointer
+
+.search-modal-active
+  transform: translateY(0)
+
+.alert
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+  text-align: center
